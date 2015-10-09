@@ -1,0 +1,11 @@
+suites:
+
+  challenges_suite:
+
+    namespace: challenges
+
+    src_path: app
+
+    spec_path: app
+
+    spec_prefix: spec
