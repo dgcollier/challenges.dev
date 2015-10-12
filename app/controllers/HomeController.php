@@ -15,9 +15,13 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showIndex()
 	{
-		return View::make('hello');
+		$postwork = ['sum_up'];
+
+		$euler = ['LargeSum' => 'large_sum', 'LargestPrimeFactor' => 'largest_prime_factor'];
+
+		return View::make('index', compact('postwork', 'euler'));
 	}
 
 }

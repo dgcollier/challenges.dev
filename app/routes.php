@@ -10,8 +10,24 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+/***********
+ *
+ * Home 
+ *
+ ***********/
+Route::get('/', 'HomeController@showIndex');
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+/***********
+ *
+ * Euler 
+ *
+ ***********/
+Route::get('/euler/large_sum', 'EulerController@showLargeSum');
+Route::get('/euler/largest_prime_factor', 'EulerController@showLargestPrimeFactor');
+
+/***********
+ *
+ * Postwork
+ *
+ ***********/
+Route::get('/postwork/sum_up/{input?}', 'PostworkController@showSumUp');

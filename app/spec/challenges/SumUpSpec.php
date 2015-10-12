@@ -11,4 +11,5 @@ class SumUpSpec extends ObjectBehavior
     {
         $this->shouldHaveType('challenges\SumUp');
     }
+
 }
