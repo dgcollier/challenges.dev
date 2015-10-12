@@ -19,7 +19,11 @@ class HomeController extends BaseController {
 	{
 		$postwork = ['sum_up'];
 
-		$euler = ['LargeSum' => 'large_sum', 'LargestPrimeFactor' => 'largest_prime_factor'];
+		$euler = [
+			'LargeSum' => 'large_sum', 
+			'LargestPrimeFactor' => 'largest_prime_factor',
+			'LargestPalindromeProduct' => 'largest_palindrome_product',
+		];
 
 		return View::make('index', compact('postwork', 'euler'));
 	}

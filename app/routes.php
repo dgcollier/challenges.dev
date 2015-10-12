@@ -24,6 +24,8 @@ Route::get('/', 'HomeController@showIndex');
  ***********/
 Route::get('/euler/large_sum', 'EulerController@showLargeSum');
 Route::get('/euler/largest_prime_factor', 'EulerController@showLargestPrimeFactor');
+Route::get('/euler/largest_palindrome_product', 'EulerController@showLargestPalindromeProduct');
+Route::get('/euler/number_letter_counts', 'EulerController@showNumberLetterCounts');
 
 /***********
  *

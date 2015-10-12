@@ -158,4 +158,48 @@ class EulerController extends \BaseController {
 		}
 	}
 
+	public function showLargestPalindromeProduct()
+	{
+		$answer = $this->findLargestPalindromeProduct();
+
+		return View::make('euler.largest_palindrome_product', compact('answer'));
+	}
+
+	protected function findLargestPalindromeProduct()
+	{
+		for($i = 998001; $i > 10000; $i--) {
+			$forward = str_split($i);
+			$backward = array_reverse($forward);
+			
+			if(array_intersect_assoc($forward, $backward) == $forward) {
+				for($j = 999; $j >= 100; $j--) {
+					if($i % $j == 0 && $i / $j >= 100 && $i / $j <= 999) {
+						return $answer = $i;
+						break;
+					}
+				}
+			}
+
+		}
+	}
+
+	public function showNumberLetterCounts()
+	{
+		return View::make('euler.number_letter_counts', compact('answer'));
+	}
+
+	private function doNumberLetterCount()
+	{
+		$ones = [
+			1 => 'one',
+			2 => 'two',
+			3 => 'three',
+			4 => 'four',
+			5 => 'five',
+			6 => 'six',
+			7 => 'seven',
+			8 => 'eight',
+			9 => 'nine',
+		];
+	}
 }
